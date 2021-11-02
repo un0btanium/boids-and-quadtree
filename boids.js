@@ -117,7 +117,7 @@ class Boid2D {
 			// if (this.flockId !== localBoid.flockId) {
 			// 	continue;
 			// }
-			if (this.distanceTo(localBoid.previousPosition) > BOID_PERSONAL_SPACE) {
+			if (this.distanceTo(localBoid.previousPosition) > BOID_PERSONAL_SPACE + BOID_SIZE) {
 				continue;
 			}
 			let tempPosition = new Vector2D(this.previousPosition.x, this.previousPosition.y);

@@ -14,9 +14,10 @@ function setup() {
 	createCustomCheckbox("SHOW FLOCK COLORS", SHOW_FLOCK_COLORS, (value) => SHOW_FLOCK_COLORS = value);
 	createCustomCheckbox("BOUNCE AT EDGES", BOID_BOUNCE_AT_EDGES, (value) => BOID_BOUNCE_AT_EDGES = value);
 	createCustomSlider("BOID AMOUNT", 100, 10000, BOID_AMOUNT, 100, (value) => { BOID_AMOUNT = value; adjustEntityAmountTo(value); });
-	createCustomSlider("BOID MAX SPEED", 0, 10, BOID_MAX_SPEED, 0.1, (value) => BOID_MAX_SPEED = value);
-	createCustomSlider("BOID PERSONAL SPACE", 0, 64, BOID_PERSONAL_SPACE, 1, (value) => BOID_PERSONAL_SPACE = value);
 	createCustomSlider("BOID VISION", 8, 256, BOID_VISION, 2, (value) => BOID_VISION = value);
+	createCustomSlider("BOID PERSONAL SPACE", 0, 64, BOID_PERSONAL_SPACE, 1, (value) => BOID_PERSONAL_SPACE = value);
+	createCustomSlider("BOID SIZE", 1, 16, BOID_SIZE, 1, (value) => BOID_SIZE = value);
+	createCustomSlider("BOID MAX SPEED", 0, 10, BOID_MAX_SPEED, 0.1, (value) => BOID_MAX_SPEED = value);
 	createCustomCheckbox("USE QUADTREE", USE_QUADTREE, (value) => { USE_QUADTREE = value; totalQuadtrees = 0; });
 	createCustomCheckbox("SHOW QUADTREE", SHOW_QUADTREE, (value) => SHOW_QUADTREE = value);
 	createCustomSlider("MAX BOIDS PER QUADTREE", 2, 500, MAX_ENTITIES_PER_QUADTREE, 1, (value) => MAX_ENTITIES_PER_QUADTREE = value);
